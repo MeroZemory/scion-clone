@@ -1,0 +1,4 @@
+# 로컬 작업 공간(비교 스크린샷, 임시 스크립트)
+.sandbox/
+.playwright-mcp/
+__pycache__/
