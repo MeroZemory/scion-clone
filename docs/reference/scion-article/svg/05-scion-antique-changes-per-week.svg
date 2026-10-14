@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1125" width="2000" height="1125" role="img" aria-label="Changes to the Scion and Antique codebases per week, January to September 2026">
+<style>
+  text { font-family: 'Styrene B','Inter','Segoe UI',system-ui,sans-serif; fill: #6B6A65; }
+  .title { font-size: 64px; font-weight: 700; fill: #141413; }
+  .sub { font-size: 34px; }
+  .tick { font-size: 24px; font-weight: 600; }
+  .legend { font-size: 26px; }
+</style>
+<rect width="2000" height="1125" fill="#E8E6DC"/>
+<text class="title" style="font-size:58px" x="1000" y="100" text-anchor="middle">Changes to the Scion and Antique codebases per week</text>
+<text class="sub" x="1000" y="150" text-anchor="middle">scm/ and antique/ directories of the Anthropic monorepo, January–September 2026</text>
+<rect x="36" y="196" width="1928" height="892" rx="28" fill="#FAF9F5"/>
+<line x1="182" y1="898.0" x2="192" y2="898.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="907.0" text-anchor="end">0</text>
+<line x1="192" y1="819.0" x2="1897" y2="819.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="819.0" x2="192" y2="819.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="828.0" text-anchor="end">200</text>
+<line x1="192" y1="740.0" x2="1897" y2="740.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="740.0" x2="192" y2="740.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="749.0" text-anchor="end">400</text>
+<line x1="192" y1="661.0" x2="1897" y2="661.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="661.0" x2="192" y2="661.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="670.0" text-anchor="end">600</text>
+<line x1="192" y1="582.0" x2="1897" y2="582.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="582.0" x2="192" y2="582.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="591.0" text-anchor="end">800</text>
+<line x1="192" y1="503.0" x2="1897" y2="503.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="503.0" x2="192" y2="503.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="512.0" text-anchor="end">1,000</text>
+<line x1="192" y1="424.0" x2="1897" y2="424.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="424.0" x2="192" y2="424.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="433.0" text-anchor="end">1,200</text>
+<line x1="192" y1="345.0" x2="1897" y2="345.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="345.0" x2="192" y2="345.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="354.0" text-anchor="end">1,400</text>
+<line x1="192" y1="266.0" x2="1897" y2="266.0" stroke="#E3E1D6" stroke-width="3"/>
+<line x1="182" y1="266.0" x2="192" y2="266.0" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="166" y="275.0" text-anchor="end">1,600</text>
+<line x1="192" y1="266" x2="192" y2="898" stroke="#6B6A65" stroke-width="3"/>
+<line x1="192" y1="898" x2="1897" y2="898" stroke="#6B6A65" stroke-width="3"/>
+<line x1="192.0" y1="898" x2="192.0" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="192.0" y="950" text-anchor="middle">Jan</text>
+<line x1="397.6" y1="898" x2="397.6" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="397.6" y="950" text-anchor="middle">Feb</text>
+<line x1="583.4" y1="898" x2="583.4" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="583.4" y="950" text-anchor="middle">Mar</text>
+<line x1="789.0" y1="898" x2="789.0" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="789.0" y="950" text-anchor="middle">Apr</text>
+<line x1="988.0" y1="898" x2="988.0" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="988.0" y="950" text-anchor="middle">May</text>
+<line x1="1193.7" y1="898" x2="1193.7" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="1193.7" y="950" text-anchor="middle">Jun</text>
+<line x1="1392.7" y1="898" x2="1392.7" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="1392.7" y="950" text-anchor="middle">Jul</text>
+<line x1="1598.4" y1="898" x2="1598.4" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="1598.4" y="950" text-anchor="middle">Aug</text>
+<line x1="1804.0" y1="898" x2="1804.0" y2="908" stroke="#6B6A65" stroke-width="3"/>
+<text class="tick" x="1804.0" y="950" text-anchor="middle">Sep</text>
+<rect x="363.1" y="894.4" width="36" height="3.6" rx="3" fill="#5591CF"/>
+<rect x="409.5" y="893.7" width="36" height="4.3" rx="3" fill="#5591CF"/>
+<rect x="455.9" y="886.1" width="36" height="11.9" rx="3" fill="#5591CF"/>
+<rect x="502.4" y="889.3" width="36" height="8.7" rx="3" fill="#5591CF"/>
+<rect x="548.8" y="882.6" width="36" height="15.4" rx="3" fill="#5591CF"/>
+<rect x="595.2" y="876.7" width="36" height="21.3" rx="3" fill="#5591CF"/>
+<rect x="641.7" y="887.7" width="36" height="10.3" rx="3" fill="#5591CF"/>
+<rect x="688.1" y="879.8" width="36" height="18.2" rx="3" fill="#5591CF"/>
+<rect x="734.6" y="884.6" width="36" height="13.4" rx="3" fill="#5591CF"/>
+<rect x="781.0" y="864.0" width="36" height="34.0" rx="3" fill="#5591CF"/>
+<rect x="827.4" y="840.3" width="36" height="57.7" rx="3" fill="#5591CF"/>
+<rect x="873.9" y="841.5" width="36" height="56.5" rx="3" fill="#5591CF"/>
+<rect x="920.3" y="843.9" width="36" height="54.1" rx="3" fill="#5591CF"/>
+<rect x="966.7" y="836.8" width="36" height="61.2" rx="3" fill="#5591CF"/>
+<rect x="1013.2" y="852.2" width="36" height="45.8" rx="3" fill="#5591CF"/>
+<rect x="1059.6" y="829.3" width="36" height="68.7" rx="3" fill="#5591CF"/>
+<rect x="1059.6" y="827.7" width="36" height="1.6" rx="3" fill="#D97757"/>
+<rect x="1106.0" y="836.0" width="36" height="62.0" rx="3" fill="#5591CF"/>
+<rect x="1106.0" y="822.2" width="36" height="13.8" rx="3" fill="#D97757"/>
+<rect x="1152.5" y="876.3" width="36" height="21.7" rx="3" fill="#5591CF"/>
+<rect x="1152.5" y="837.6" width="36" height="38.7" rx="3" fill="#D97757"/>
+<rect x="1198.9" y="876.3" width="36" height="21.7" rx="3" fill="#5591CF"/>
+<rect x="1198.9" y="814.3" width="36" height="62.0" rx="3" fill="#D97757"/>
+<rect x="1245.3" y="885.0" width="36" height="13.0" rx="3" fill="#5591CF"/>
+<rect x="1245.3" y="785.8" width="36" height="99.1" rx="3" fill="#D97757"/>
+<rect x="1291.8" y="896.4" width="36" height="1.6" rx="3" fill="#5591CF"/>
+<rect x="1291.8" y="802.8" width="36" height="93.6" rx="3" fill="#D97757"/>
+<rect x="1338.2" y="895.2" width="36" height="2.8" rx="3" fill="#5591CF"/>
+<rect x="1338.2" y="723.8" width="36" height="171.4" rx="3" fill="#D97757"/>
+<rect x="1384.7" y="897.6" width="36" height="0.4" rx="3" fill="#5591CF"/>
+<rect x="1384.7" y="636.5" width="36" height="261.1" rx="3" fill="#D97757"/>
+<rect x="1431.1" y="640.9" width="36" height="257.1" rx="3" fill="#D97757"/>
+<rect x="1477.5" y="692.6" width="36" height="205.4" rx="3" fill="#D97757"/>
+<rect x="1524.0" y="511.3" width="36" height="386.7" rx="3" fill="#D97757"/>
+<rect x="1570.4" y="843.1" width="36" height="54.9" rx="3" fill="#D97757"/>
+<rect x="1616.8" y="508.1" width="36" height="389.9" rx="3" fill="#D97757"/>
+<rect x="1663.3" y="544.5" width="36" height="353.5" rx="3" fill="#D97757"/>
+<rect x="1709.7" y="554.3" width="36" height="343.7" rx="3" fill="#D97757"/>
+<rect x="1756.1" y="539.3" width="36" height="358.7" rx="3" fill="#D97757"/>
+<rect x="1802.6" y="446.5" width="36" height="451.5" rx="3" fill="#D97757"/>
+<rect x="1849.0" y="283.0" width="36" height="615.0" rx="3" fill="#D97757"/>
+<rect x="213" y="287" width="311" height="101" rx="18" fill="#FAF9F5" stroke="#6B6A65" stroke-width="3"/>
+<text x="234" y="330" font-size="34" font-weight="700" style="fill:#3D3D3A">12,257</text>
+<text x="234" y="364" font-size="24">changes since January</text>
+<rect x="706" y="998" width="30" height="30" rx="5" fill="#5591CF"/>
+<text class="legend" x="752" y="1022">Pull requests</text>
+<rect x="948" y="998" width="30" height="30" rx="5" fill="#D97757"/>
+<text class="legend" x="994" y="1022">Antique change requests</text>
+</svg>
