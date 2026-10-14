@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 895" width="2000" height="895" role="img" aria-label="Scion's checkout architecture: clients send control-plane requests to scion-server; object-plane requests for trees and file contents go to the regional scion-cache, or via the per-node scion-daemon for CI jobs; misses fall through to scion-server, which reads Spanner and Cloud Storage; periodic snapshots seed new nodes">
+<!-- 이미지 04: Scion 체크아웃 아키텍처. 회색 = control plane, 주황 = object plane, 파랑 = Scion 서비스 계층 -->
+<style>
+  text { font-family: 'Styrene B','Inter','Segoe UI',system-ui,sans-serif; fill: #6B6A65; }
+  .m { font-family: 'JetBrains Mono','Cascadia Mono',Consolas,monospace; font-size: 28px; font-weight: 600; }
+  .n { font-size: 28px; font-weight: 600; }
+  .s { font-size: 24px; }
+  .eo { font-size: 26px; font-weight: 600; fill: #D97757; }
+  .eg { font-size: 26px; font-weight: 600; }
+  .box { fill: #FFFFFF; stroke: #6B6A65; stroke-width: 3; }
+  .svc { fill: #EEF4FB; stroke: #4A8BD0; stroke-width: 3; }
+  .g { stroke: #6B6A65; stroke-width: 3; fill: none; }
+  .o { stroke: #D97757; stroke-width: 3; fill: none; }
+</style>
+<defs>
+  <marker id="ag" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#6B6A65" stroke-width="3"/>
+  </marker>
+  <marker id="ao" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#D97757" stroke-width="3"/>
+  </marker>
+</defs>
+<rect width="2000" height="895" fill="#E8E6DC"/>
+<rect x="36" y="36" width="1928" height="822" rx="28" fill="#FAF9F5"/>
+
+<!-- Clients -->
+<rect x="99" y="99" width="371" height="492" rx="18" fill="#F1EFE8" stroke="#6B6A65" stroke-width="3"/>
+<text class="n" x="131" y="147">Clients</text>
+<rect class="box" x="130" y="212" width="147" height="76" rx="12"/><text class="n" x="152" y="260">Antique</text>
+<rect class="box" x="130" y="346" width="309" height="76" rx="12"/><text class="n" x="152" y="394">Developer machines</text>
+<rect class="box" x="130" y="479" width="283" height="76" rx="12"/><text class="n" x="152" y="527">CI and cluster jobs</text>
+
+<!-- Scion 서비스 계층 -->
+<rect class="svc" x="1245" y="99" width="270" height="99" rx="14"/>
+<text class="m" x="1277" y="159">scion-server</text>
+<rect class="svc" x="956" y="292" width="271" height="299" rx="14"/>
+<text class="m" x="988" y="342">scion-cache</text><text class="s" x="988" y="382">Regional</text>
+<rect class="svc" x="511" y="464" width="297" height="127" rx="14"/>
+<text class="m" x="543" y="518">scion-daemon</text><text class="s" x="543" y="557">Per node</text>
+
+<!-- 저장소 -->
+<rect class="box" x="1630" y="99" width="271" height="159" rx="14"/>
+<text class="n" x="1662" y="153">Spanner</text>
+<text class="s" x="1662" y="193">Changesets,</text><text class="s" x="1662" y="224">branches, trees</text>
+<rect class="box" x="1630" y="292" width="271" height="127" rx="14"/>
+<text class="n" x="1662" y="346">Cloud Storage</text><text class="s" x="1662" y="386">File contents</text>
+
+<!-- Periodic snapshot -->
+<rect class="box" x="511" y="696" width="297" height="100" rx="14"/>
+<text class="n" x="543" y="756">Periodic snapshot</text>
+
+<!-- Control plane: 모든 클라이언트 → scion-server -->
+<line class="g" x1="470" y1="149" x2="1213" y2="149" marker-end="url(#ag)"/>
+<text class="eg" x="511" y="136">Branches, history, diffs: upload, commit, land</text>
+<text class="s" x="511" y="182">Control plane · every client</text>
+
+<!-- scion-server → Spanner / Cloud Storage -->
+<line class="g" x1="1515" y1="149" x2="1619" y2="149" marker-end="url(#ag)"/>
+<path class="g" d="M1515 149 H1550 a16 16 0 0 1 16 16 V338 a16 16 0 0 0 16 16 H1619" marker-end="url(#ag)"/>
+
+<!-- Object plane: 개발자 머신 → scion-cache 직접 -->
+<line class="o" x1="439" y1="383" x2="946" y2="383" marker-end="url(#ao)"/>
+<text class="eo" x="511" y="369">Trees and file contents</text>
+<text class="s" x="513" y="415">Object plane</text>
+
+<!-- CI/클러스터 작업 → scion-daemon → (miss) scion-cache → (miss) scion-server -->
+<line class="o" x1="413" y1="517" x2="501" y2="517" marker-end="url(#ao)"/>
+<line class="o" x1="808" y1="527" x2="946" y2="527" marker-end="url(#ao)"/>
+<text class="eo" x="839" y="505">Misses</text>
+<path class="o" d="M1227 455 H1363 a16 16 0 0 0 16 -16 V210" marker-end="url(#ao)"/>
+<text class="eo" x="1257" y="432">Misses</text>
+
+<!-- 스냅샷이 새 노드의 daemon을 seed -->
+<line class="g" x1="659" y1="696" x2="659" y2="603" stroke-dasharray="10 7" marker-end="url(#ag)"/>
+<rect x="545" y="632" width="228" height="40" fill="#FAF9F5"/>
+<text class="eg" x="659" y="659" text-anchor="middle">Seeds new nodes</text>
+</svg>

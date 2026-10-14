@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1560" width="2000" height="1560" role="img" aria-label="Shape of a Scion changeset: metadata rows in Spanner, file_changes pointing to content-addressed blobs in Cloud Storage, a parent link to the previous changeset, and server-derived trees that are not stored in the changeset">
+<!-- 이미지 03: Scion changeset 구조. Spanner(메타데이터) / Cloud Storage(파일 내용) 두 저장 계층 -->
+<style>
+  text { font-family: 'Styrene B','Inter','Segoe UI',system-ui,sans-serif; fill: #6B6A65; }
+  .m { font-family: 'JetBrains Mono','Cascadia Mono',Consolas,monospace; font-size: 25px; }
+  .k { font-weight: 700; }
+  .hash { fill: #D97757; font-weight: 700; }
+  .lbl { font-size: 26px; }
+  .sec { font-size: 34px; font-weight: 600; }
+  .row { stroke: #DAD8CE; stroke-width: 3; }
+  .box { fill: #FFFFFF; stroke: #6B6A65; stroke-width: 3; }
+  .dbox { fill: #FFFFFF; stroke: #6B6A65; stroke-width: 3; stroke-dasharray: 14 10; }
+  .g { stroke: #6B6A65; stroke-width: 3; fill: none; }
+  .o { stroke: #D97757; stroke-width: 3; fill: none; }
+</style>
+<defs>
+  <marker id="ag" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#6B6A65" stroke-width="3"/>
+  </marker>
+  <marker id="ao" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#D97757" stroke-width="3"/>
+  </marker>
+</defs>
+<rect width="2000" height="1560" fill="#E8E6DC"/>
+<text x="1000" y="112" text-anchor="middle" font-size="64" font-weight="700" style="fill:#141413">Shape of a Scion changeset</text>
+
+<!-- 계층 1: Spanner — changeset 메타데이터 -->
+<rect x="36" y="178" width="1928" height="1062" rx="28" fill="#FAF9F5"/>
+<text class="sec" x="99" y="252">Spanner: metadata</text>
+
+<!-- Changeset 레코드 -->
+<rect class="box" x="101" y="307" width="1155" height="638" rx="16"/>
+<path d="M101 386 V323 a16 16 0 0 1 16 -16 H1240 a16 16 0 0 1 16 16 V386 Z" fill="#F1EFE8" stroke="#6B6A65" stroke-width="3"/>
+<text class="lbl" x="138" y="356" font-weight="600">Changeset</text>
+<text class="m hash" x="1218" y="356" text-anchor="end">id 9f2c…7ab0</text>
+
+<g class="m">
+  <text class="m k" x="138" y="425">author</text>        <text class="m" x="398" y="425">Claude &lt;noreply@anthropic.com&gt;</text>
+  <line class="row" x1="138" y1="448" x2="1220" y2="448"/>
+  <text class="m k" x="138" y="483">author_date</text>   <text class="m" x="398" y="483">2026-09-15T01:25:09+00:00</text>
+  <line class="row" x1="138" y1="506" x2="1220" y2="506"/>
+  <text class="m k" x="138" y="541">committer</text>     <text class="m" x="398" y="541">Scion &lt;noreply+scion@anthropic.com&gt;</text>
+  <text class="lbl" x="1218" y="541" text-anchor="end">Optional</text>
+  <line class="row" x1="138" y1="564" x2="1220" y2="564"/>
+  <text class="m k" x="138" y="600">committer_date</text><text class="m" x="398" y="600">2026-09-15T01:31:40+00:00</text>
+  <text class="lbl" x="1218" y="600" text-anchor="end">Optional</text>
+  <line class="row" x1="138" y1="623" x2="1220" y2="623"/>
+  <text class="m k" x="138" y="658">message</text>       <text class="m" x="398" y="658">scion-cache: serve blobs from the memory tier</text>
+  <line class="row" x1="138" y1="681" x2="1220" y2="681"/>
+  <text class="m k" x="138" y="717">parents</text>       <text class="m hash" x="398" y="717">d41c…88e2</text>
+  <line class="row" x1="138" y1="740" x2="1220" y2="740"/>
+  <text class="m k" x="138" y="775">signature</text>     <text class="m" x="398" y="775">—</text>
+  <text class="lbl" x="1218" y="775" text-anchor="end">Optional</text>
+  <line class="row" x1="138" y1="798" x2="1220" y2="798"/>
+  <!-- file_changes: 첫 번째 부모 대비 변경된 파일 목록 + 내용 해시(삭제는 해시 없음) -->
+  <text class="m k" x="138" y="834">file_changes</text>
+  <text class="m" x="398" y="834">docs/guide.md</text>   <text class="m hash" x="650" y="834">3e1f…a2c4</text>
+  <text class="lbl" x="1218" y="834" text-anchor="end">Regular file</text>
+  <text class="m" x="398" y="875">src/legacy.rs</text>   <text class="lbl" x="650" y="875">Deleted</text>
+  <text class="m" x="398" y="917">tools/build.sh</text>  <text class="m hash" x="650" y="917">9b07…5d18</text>
+  <text class="lbl" x="1218" y="917" text-anchor="end">Executable</text>
+</g>
+
+<!-- 부모 changeset 체인 -->
+<line class="g" x1="1256" y1="709" x2="1347" y2="709" marker-end="url(#ag)"/>
+<rect class="box" x="1357" y="669" width="404" height="79" rx="14"/>
+<text class="lbl" x="1389" y="718" font-weight="600">Changeset</text>
+<text class="m hash" x="1551" y="718">id d41c…88e2</text>
+<line class="g" x1="1761" y1="709" x2="1852" y2="709" marker-end="url(#ag)"/>
+<text x="1888" y="720" text-anchor="middle" font-size="28">…</text>
+
+<!-- 서버가 파생하는 트리 (changeset에 저장되지 않음) -->
+<line class="g" x1="1102" y1="948" x2="1102" y2="1048" stroke-dasharray="10 7" marker-end="url(#ag)"/>
+<text class="lbl" x="1131" y="1013" font-weight="600">Derived by the server, not stored in the changeset</text>
+<rect class="dbox" x="948" y="1061" width="350" height="79" rx="14"/>
+<text class="lbl" x="979" y="1110" font-weight="600">Root tree</text>
+<text class="m hash" x="1131" y="1110">5c0e…d1a9</text>
+<line class="g" x1="1298" y1="1100" x2="1389" y2="1100" marker-end="url(#ag)"/>
+<rect class="dbox" x="1399" y="1061" width="362" height="79" rx="14"/>
+<text class="m" x="1431" y="1110">Tree src/</text>
+<text class="m hash" x="1595" y="1110">77f0…e9b4</text>
+<text class="m" x="1606" y="1186">app.rs</text>
+
+<!-- 계층 2: Cloud Storage — 해시로 주소 지정되는 불변 파일 내용 -->
+<rect x="36" y="1272" width="1928" height="252" rx="28" fill="#FAF9F5"/>
+<text class="sec" x="99" y="1347">Cloud Storage: file contents</text>
+<text class="lbl" x="99" y="1424">Immutable, compressed</text>
+<text class="lbl" x="99" y="1458">and deduplicated by hash</text>
+<rect class="box" x="582" y="1393" width="270" height="78" rx="14"/><text class="m hash" x="717" y="1442" text-anchor="middle">9b07…5d18</text>
+<rect class="box" x="1014" y="1393" width="270" height="78" rx="14"/><text class="m hash" x="1149" y="1442" text-anchor="middle">3e1f…a2c4</text>
+<rect class="box" x="1446" y="1393" width="270" height="78" rx="14"/><text class="m hash" x="1581" y="1442" text-anchor="middle">c5d2…0e77</text>
+<text x="1888" y="1446" text-anchor="middle" font-size="28">…</text>
+
+<!-- 내용 포인터: file_changes 해시 → blob, 파생 트리 엔트리 → blob -->
+<line class="o" x1="717" y1="945" x2="717" y2="1381" marker-end="url(#ao)"/>
+<path class="o" d="M749 945 V1172 a16 16 0 0 0 16 16 H1133 a16 16 0 0 1 16 16 V1381" marker-end="url(#ao)"/>
+<line class="g" x1="1581" y1="1140" x2="1581" y2="1381" marker-end="url(#ag)"/>
+</svg>

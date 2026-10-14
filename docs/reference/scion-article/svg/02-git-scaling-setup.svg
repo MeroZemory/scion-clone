@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 645" width="2000" height="645" role="img" aria-label="The typical setup for scaling git checkouts: jobs fetch through a per-cluster packfile cache, mirror replicas and mirror primaries to upstream; mirror replicas also publish a seed snapshot to blob storage that becomes a node seed for jobs">
+<!-- 이미지 02: git 체크아웃 확장의 전형적 구성 (Scion 이전 구조) -->
+<style>
+  text { font-family: 'Styrene B','Inter','Segoe UI',system-ui,sans-serif; fill: #6B6A65; }
+  .h { font-size: 28px; font-weight: 600; }
+  .n { font-size: 29px; font-weight: 600; }
+  .s { font-size: 24px; }
+  .box { fill: #FFFFFF; stroke: #6B6A65; stroke-width: 3; }
+  .g { stroke: #6B6A65; stroke-width: 3; fill: none; }
+  .o { stroke: #D97757; stroke-width: 3; fill: none; }
+</style>
+<defs>
+  <marker id="ag" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#6B6A65" stroke-width="3"/>
+  </marker>
+  <marker id="ao" viewBox="0 0 12 16" refX="11" refY="8" markerWidth="12" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1 1 L11 8 L1 15" fill="none" stroke="#D97757" stroke-width="3"/>
+  </marker>
+</defs>
+<rect width="2000" height="645" fill="#E8E6DC"/>
+<rect x="36" y="36" width="1928" height="572" rx="28" fill="#FAF9F5"/>
+
+<!-- Jobs: 체크아웃을 소비하는 클라이언트 그룹 -->
+<rect x="73" y="73" width="427" height="493" rx="18" fill="#F1EFE8" stroke="#6B6A65" stroke-width="3"/>
+<text class="h" x="109" y="125">Jobs</text>
+<rect class="box" x="109" y="159" width="132" height="76" rx="12"/><text class="n" x="131" y="207">CI jobs</text>
+<rect class="box" x="109" y="258" width="365" height="76" rx="12"/><text class="n" x="131" y="306">Developer environments</text>
+<rect class="box" x="109" y="357" width="269" height="76" rx="12"/><text class="n" x="131" y="405">Agent sandboxes</text>
+<rect class="box" x="109" y="456" width="226" height="76" rx="12"/><text class="n" x="131" y="504">Research jobs</text>
+
+<!-- Per cluster: 클러스터마다 복제되는 미러 계층 -->
+<rect x="552" y="76" width="1047" height="216" rx="18" fill="none" stroke="#6B6A65" stroke-width="3" stroke-dasharray="14 10"/>
+<text class="h" x="589" y="125">Per cluster</text>
+<rect class="box" x="588" y="154" width="276" height="100" rx="14"/><text class="n" x="620" y="214">Packfile cache</text>
+<rect class="box" x="937" y="154" width="276" height="100" rx="14"/><text class="n" x="969" y="214">Mirror replicas</text>
+<rect class="box" x="1286" y="154" width="276" height="100" rx="14"/><text class="n" x="1318" y="214">Mirror primaries</text>
+<rect class="box" x="1650" y="154" width="276" height="100" rx="14"/><text class="n" x="1682" y="214">Upstream</text>
+
+<!-- Seed 경로: 미러 → 블롭 스토리지 스냅샷 → 노드 seed → Jobs -->
+<rect class="box" x="588" y="436" width="276" height="130" rx="14"/><text class="n" x="620" y="510">Node seed</text>
+<rect class="box" x="937" y="436" width="276" height="130" rx="14"/>
+<text class="n" x="969" y="494">Blob storage</text><text class="s" x="969" y="528">Seed snapshot</text>
+
+<!-- 화살표: 주황 = 체크아웃 데이터가 Jobs에 도달하는 경로, 회색 = 상류 동기화 -->
+<line class="o" x1="500" y1="204" x2="578" y2="204" marker-end="url(#ao)"/>
+<line class="o" x1="864" y1="204" x2="927" y2="204" marker-end="url(#ao)"/>
+<line class="g" x1="1213" y1="204" x2="1276" y2="204" marker-end="url(#ag)"/>
+<line class="g" x1="1562" y1="204" x2="1640" y2="204" marker-end="url(#ag)"/>
+<line class="o" x1="1075" y1="254" x2="1075" y2="424" marker-end="url(#ao)"/>
+<line class="o" x1="937" y1="505" x2="876" y2="505" marker-end="url(#ao)"/>
+<line class="o" x1="588" y1="505" x2="512" y2="505" marker-end="url(#ao)"/>
+</svg>
